@@ -14,7 +14,7 @@ with open('data.csv') as csvfile:
             if int(row['sms_number'])<free_sms:
                 sms=0
             else:
-                sms = int(row['sms_number'])-free_sms
+                sms = (int(row['sms_number'])-free_sms)*sms_price
             inp = sms*1 + float(row['call_duration'])*outp_price
         elif row['msisdn_dest']==number:
             if float(row['call_duration'])>float(free_inp_mins):
