@@ -19,7 +19,7 @@ k=0.5
 sum=0.5
 sum=sum-0.5
 mb=kb/1048576
-print(mb)
+# print(mb)
 while mb>=500:
     sum=sum+(500*k)
     k=k+0.5
