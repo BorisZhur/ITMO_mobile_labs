@@ -14,7 +14,7 @@ with open('data3.csv') as csvfile:
             x.append(datetime.strptime(row['ts'],"%Y-%m-%d %H:%M:%S"))
             y.append(kb/1048576)
 # print(x)
-print(y)
+# print(y)
 k=0.5
 sum=0.5
 sum=sum-0.5
