@@ -4,3 +4,7 @@
 1. Открыть PyCharm
 2. File > open > выбрать файл prog.py
 3. Run > run > prog
+
+Журавлев Б.С. 
+		vk: https://vk.com/boriszh 
+		mail: borya.ahahac@mail.ru
