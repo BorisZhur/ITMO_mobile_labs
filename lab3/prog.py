@@ -1,6 +1,9 @@
 from docxtpl import DocxTemplate
 import csv
 from datetime import datetime
+import sys
+import os
+import comtypes.client
 def lab1():
     number = "968247916"
     free_inp_mins = 5
@@ -71,3 +74,13 @@ context = { 'bank' : 'ПАО Известный Банк',
             'n':'2','d':'1 июня','y':'20', 'buy':'ООО Зеленоглазое такси', 'rus': 'rub'}
 doc.render(context)
 doc.save("lab3.docx")
+wdFormatPDF = 17
+
+in_file = 'F:\ITMO_mobile_labs\ITMO_mobile_labs\lab3\lab3.docx'
+out_file = 'F:\ITMO_mobile_labs\ITMO_mobile_labs\lab3\lab3.pdf'
+
+word = comtypes.client.CreateObject('Word.Application')
+doc = word.Documents.Open(in_file)
+doc.SaveAs(out_file, FileFormat=wdFormatPDF)
+doc.Close()
+word.Quit()
